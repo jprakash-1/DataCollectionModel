@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Tweet</title>
+</head>
+<body>
+    <h3>Select the Tweet's Value : </h3> <br>
+    <div>
+        Tweet : <%- tweet %> <br>
+        <div>
+            <form action="/api/v1/content/updateContent/<%= id%>?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <input type="radio" id="1" name="value" value="1">
+                <label for="1">1</label><br>
+                <input type="radio" id="2" name="value" value="2">
+                <label for="2">2</label><br>
+                <input type="radio" id="3" name="value" value="3">
+                <label for="3">3</label><br>
+                <input type="radio" id="4" name="value" value="4">
+                <label for="4">4</label><br>
+                <input type="radio" id="5" name="value" value="5">
+                <label for="5">5</label><br><br>
+                
+
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
