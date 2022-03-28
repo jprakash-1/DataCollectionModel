@@ -7,7 +7,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import methodOverride from "method-override";
 
-import ContentRouter from "../backend/controllers/content.js";
+import ContentRouter from "../DataCollectionModel/controllers/content.js";
 
 const app = express();
 const PORT = 3001;
@@ -68,7 +68,7 @@ app.get("/", (req,res) => {
     res.send("Hello World!");
 });
 
-app.use("/api/v1/content",ContentRouter);
+app.use("/model/",ContentRouter);
 
 app.get("*", (req,res) => {
     res.send("404 No Page Found!");

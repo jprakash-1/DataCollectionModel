@@ -86,7 +86,7 @@ router.put("/updateContent/:id", async(req,res) => {
   content.value = req.body.value;
   content.read = true;
   await content.save();
-  return res.redirect("/api/v1/content/showContent");
+  return res.redirect("/model/showContent");
 });
 
 
